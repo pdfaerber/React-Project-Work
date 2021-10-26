@@ -1,8 +1,8 @@
 import ExpenseItem from "./ExpenseItem";
 import Card from "./Card";
-import './ExpenseItem.css';
+import "./ExpenseItem.css";
 
-function ExpenseList() {
+const ExpenseList = (props) => {
   const expenses = [
     {
       id: "e1",
@@ -30,8 +30,11 @@ function ExpenseList() {
     },
   ];
 
+ 
+  console.log(expenses);
+
   return (
-    <Card className = "expenses">
+    <Card className="expenses">
       <h2>Expense App - Let's get it started!</h2>
       <ExpenseItem
         title={expenses[0].title}
@@ -55,5 +58,5 @@ function ExpenseList() {
       />
     </Card>
   );
-}
+};
 export default ExpenseList;

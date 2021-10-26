@@ -1,10 +1,24 @@
 import ExpenseList from "./components/ExpenseList";
+import NewExpense from "./components/NewExpense/NewExpense";
 // import "./App.css";
 
-function App() {
+
+
+
+const App = ()=> {
+  
+
+  const addExpenseHandler = expense => {
+    console.log("In ExpenseList.jsx");
+    console.log(expense);
+
+  };
+ 
   return (
     <div>
-      <ExpenseList  />
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <ExpenseList />
+     
     </div>
   );
 }
